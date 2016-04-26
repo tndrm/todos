@@ -14,21 +14,22 @@
 		}
 		h1{
 			margin: 0;
-			color: #fff;
 			text-align: center; 
 			font-weight: normal; 
-			font-size: 8em;
-			margin-bottom: 15px;
+			font-size: 128px;
 
 		}	
 		form{
 			text-align: center;
+			width: 100%;
+			margin: 0 auto;
+			background-color: #F3F5F4;
 
 		}
 		#list{
 			width: 404px;
 			margin: 0 auto;
-			font-size: 1.5em;
+			font-size: 24px;
 		}
 		#close{
 			height: 24px;
@@ -44,12 +45,12 @@
 			height: 50px;
 		}
 		input{
-			padding: 10px 0;
-			font-size: 2em;
+			font-size: 24px;
 			font-style: italic;
+			width: 90%;
 			background-color: #F3F5F4;
 			border: 0px solid #DCE8EB;
-			width:404px;
+			padding: 10px 0;
 		}
 		input[type="checkbox"] {
     		display:none;
@@ -75,14 +76,16 @@
 
 		footer{
 			width: 404px;
-			font-size: 0.5em;
-			margin: 30px auto;
+		
+			margin: 20px auto;
 		}
 		footer input{
 			background-color: #CDD1D4;
 			color: gray;
 			padding: 5px 10px;
-			cursor:pointer;
+			cursor:pointer;	
+			font-size: 16px;
+			width: auto;
 
 		}
 		footer input:hover{
@@ -97,15 +100,13 @@
 </head>
 <body>
 	<h1>todos</h1>
-	<form name="todos" action="" onsubmit="addToList(document.getElementById('form')); return false" method="post" id="form">
-		<input  type="text"  id="newCase" name="newCase" placeholder="What needs to be done?" >
-		
-	</form>
+	
 	<div id="list">
+		<form name="todos" action="" onsubmit="addToList(document.getElementById('form')); return false" method="post" id="form">
+			<input  type="text"  id="newCase" name="newCase" placeholder="What needs to be done?" >
+		
+		</form>
 		<div id="allCases"><script>printCases('all')</script></div>
-
-		
-		
 
 	</div>
 	<footer>
