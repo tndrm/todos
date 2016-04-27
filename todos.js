@@ -1,6 +1,6 @@
 var all = [
 		{ checkbox: 'checked', value: 'wake up' },
-		{ checkbox: '', value: 'survaive' },
+		{ checkbox: '', value: 'survive' },
 		{ checkbox: '', value: 'back to sleep' }
 	]
 var mode = 'all';
