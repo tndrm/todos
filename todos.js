@@ -21,7 +21,7 @@ function printCases(mode) { ///???????????????
 
 function addToList(form){
 	if (form.newCase.value) { 
-		all[all.length] = {checkbox: '', value: form.newCase.value};
+		all.push({checkbox: '', value: form.newCase.value});
 	};
 	printCases(mode);
 
