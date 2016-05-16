@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo list</title>
+	<style type="text/css">
+
+		body{
+			margin: 0;
+			font-family: helvetica;
+			background-color: #CDD1D4;
+			
+			
+		}
+		h1{
+			margin: 0;
+			text-align: center; 
+			font-weight: normal; 
+			font-size: 128px;
+			color: #fff;
+
+		}	
+		#list{
+			width: 404px;
+			margin: 0 auto;
+			font-size: 24px;
+		}
+		form{
+			width: 100%;
+			margin: 0 auto;
+			background-color: white;
+		}
+		#newCase{
+			margin: 0 10px;
+		}
+		input{
+			font-size: 24px;
+			font-style: italic;
+			border: 0px;
+			padding: 10px 0;
+		}
+		label{
+			display: block;
+			padding: 7px 10px;
+			background-color: #F3F5F4;
+			color:#5D5757;
+		}
+		input:checked + span{
+    		text-decoration: line-through;
+		}
+
+		.delete{
+			height: 24px;
+			width: 24px;
+			background:url(close.png)no-repeat;
+			background-size: 28px;
+			background-position: center;
+			float: right;
+			padding: 0;
+			-webkit-box-shadow: none;
+		}
+		footer{
+			width: 404px;
+		
+			margin: 20px auto;
+		}
+		footer a{
+			background-color: #CDD1D4;
+			color: gray;
+			padding: 5px 10px;
+			cursor:pointer;	
+			font-size: 16px;
+			width: auto;
+			-webkit-box-shadow: none;
+			text-decoration: none;
+		}
+		footer a:hover{
+			text-decoration: underline;
+		}
+
+
+	</style>
+	
+</head>
+<body>
+
+	<h1>todos</h1>
+	
+	<div id="list">
+		<form name="todos" method="post" onsubmit="add(); return false" id="form">
+			<input  type="text"  id="newCase" name="newCase"  placeholder="What needs to be done?" >
+			<div class = "dynamic-inputs">
+			
+				<label for="1" class="label" id="1">
+					<input type="checkbox" id="1" checked>
+					<span>
+						wake up
+					</span>
+					<a href="#" class="delete" id="1"></a>
+				</label>
+
+				<label for="2" class="label" id="2">
+					<input type="checkbox" id="2">
+					<span>
+						survive
+					</span>
+					<a href="#" class="delete" id="2"></a>
+				</label>
+
+				<label for="3" class="label" id="3">
+					<input type="checkbox" id="3">
+					<span>
+						back to sleep
+					</span>
+					<a href="#" class="delete" id="3"></a>
+				</label>
+
+			</div>
+		</form>
+	</div>
+	<footer>
+		<a href="#" id="completed">completed</a><a href="#" id="active">active</a><a href="#" id="all">all</a><a href="#" id="clear">clear completed</a>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src = 'todos.js'>
+	</script>
+	</footer>
+</body>
+</html>
